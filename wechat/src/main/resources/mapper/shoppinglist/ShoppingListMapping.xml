@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.ning.shoppinglist.mapper.ShoppingListMapping">
+    <insert id="addShoppingList" parameterType="com.cn.ning.shoppinglist.po.FamilyShoppingListPO">
+        <selectKey keyProperty="id" resultType="Integer" order="BEFORE">
+            select seq_family_shopping_list.nextval as id
+        </selectKey>
+        insert into family_shopping_list
+        values(#{id},#{productName,jdbcType=INTEGER},#{amountBudget,jdbcType=VARCHAR},#{ownerId,jdbcType=INTEGER},#{operatorId,jdbcType=INTEGER},SYSDATE()
+          ,SYSDATE(),'0',#{amount,jdbcType=VARCHAR},#{priorityLevel,jdbcType=INTEGER},#{priorityLevel2,jdbcType=INTEGER},#{remarks,jdbcType=VARCHAR})
+    </insert>
+
+
+</mapper>

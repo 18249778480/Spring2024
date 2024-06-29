@@ -1,0 +1,13 @@
+server:
+  name: wechat
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-bp1912s49m851c207bo.mysql.rds.aliyuncs.com:3306/wechat
+    username: wynwechat
+    password: Wyn176059
+
+mybatis:
+  mapper-locations: classpath:**/*.xml
+
